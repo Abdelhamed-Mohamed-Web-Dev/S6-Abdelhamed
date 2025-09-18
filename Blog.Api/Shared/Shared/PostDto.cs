@@ -1,12 +1,12 @@
-﻿namespace Domain.Entities
+﻿namespace Shared
 {
-	public class Post : BaseEntity<int>
+	public record PostDto
 	{
+		public int Id { get; set; }
 		public string Title { get; set; }
 		public string Content { get; set; }
 		public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-		public Category Category { get; set; }
 		public int CategoryId { get; set; }
-		public IEnumerable<Comment> Comments { get; set; } = new List<Comment>();
+		public IEnumerable<CommentDto> Comments { get; set; } = new List<CommentDto>();
 	}
 }

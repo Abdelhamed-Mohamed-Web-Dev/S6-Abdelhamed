@@ -17,5 +17,8 @@
 
 		public void Delete(TEntity entity)
 		=> blogContext.Set<TEntity>().Remove(entity);
+
+		public Task SaveAsync()
+		=> blogContext.SaveChangesAsync();
 	}
 }

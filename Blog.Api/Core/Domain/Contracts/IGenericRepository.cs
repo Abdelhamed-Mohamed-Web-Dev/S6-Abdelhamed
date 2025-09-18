@@ -9,5 +9,6 @@ namespace Domain.Contracts
 		public Task AddAsync(TEntity entity);
 		public void Update(TEntity entity);
 		public void Delete(TEntity entity);
+		public Task SaveAsync();
 	}
 }
